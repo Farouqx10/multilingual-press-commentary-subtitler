@@ -58,6 +58,42 @@ This project was developed as part of the NCAIR AI Training Programme.
 
 ---
 
+Video Input
+    │
+    ▼
+Language Identification
+    │
+    ▼
+User confirms source language + picks target language
+    │
+    ▼
+Stage 1 — Transcription
+    NCAIR ASR model (Hausa / Yoruba / Igbo / Nigerian English)
+    → chunked inference (30s windows, 2s overlap)
+    → word-level merge & de-duplication
+    → subtitle block segmentation (duration/pause/word-count/punctuation)
+    → raw .srt
+    │
+    ▼
+Stage 2 — Cleanup (N-ATLaS GGUF, llama.cpp, batched w/ retry+validation)
+    Spelling/punctuation/ASR-error correction only, no rewriting
+    → cleaned .srt
+    │
+    ▼
+Stage 3 — Translation (N-ATLaS GGUF, llama.cpp, batched w/ retry+validation)
+    Dynamic source→target prompt (any of the 4 langs + English)
+    → bilingual .srt (original line + translated line)
+    │
+    ▼
+Burn-in (ffmpeg subtitles filter, resolution-scaled font)
+    → final captioned .mp4
+    │
+    ▼
+(Optional) Real-time Web App — FastAPI backend + vanilla HTML/JS frontend,
+tunneled via ngrok for a public Colab-hosted URL
+
+---
+
 ## Repository Structure
 
 Multi-Lingual-Press-Commentary-Subtitler/
@@ -107,8 +143,6 @@ The application produces:
 - Subtitle (.srt) file
 - Final video with embedded subtitles
 
-(Add screenshots or sample outputs here.)
-
 ---
 
 ## Future Improvements
@@ -136,10 +170,18 @@ We sincerely acknowledge:
 - Daniel Ottah
 - Titlayoomi Kehinde
 - Nzubechukwu Illo
-- Umar Farouq
+- Umar Ibrahim 
 - Isaac Famiyesin
 - Imran Ibrahim
 - Chiedozie Chimah
+- David Olaniyi
+  
+---
+
+## Facilitators
+- Victor Rizama
+- Stephen Ayuba
+
 ---
 
 ## License
