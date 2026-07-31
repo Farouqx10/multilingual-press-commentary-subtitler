@@ -107,8 +107,6 @@ The application produces:
 - Subtitle (.srt) file
 - Final video with embedded subtitles
 
-(Add screenshots or sample outputs here.)
-
 ---
 
 ## Future Improvements
@@ -136,10 +134,18 @@ We sincerely acknowledge:
 - Daniel Ottah
 - Titlayoomi Kehinde
 - Nzubechukwu Illo
-- Umar Farouq
+- Umar Ibrahim 
 - Isaac Famiyesin
 - Imran Ibrahim
 - Chiedozie Chimah
+- David Olaniyi
+  
+---
+
+## Facilitators
+- Victor Rizama
+- Stephen Ayuba
+
 ---
 
 ## License
