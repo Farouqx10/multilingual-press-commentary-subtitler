@@ -94,6 +94,15 @@ tunneled via ngrok for a public Colab-hosted URL
 
 ---
 
+## Real-time feature
+Audio is processed in short rolling chunks instead of one full pass.
+Each chunk goes straight from ASR to subtitle — no N-ATLaS cleanup or translation (too slow for live use).
+Same rules decide subtitle breaks (pause length, word count, punctuation), just applied chunk-by-chunk as words come in.
+Video plays instantly from the browser; captions stream in and overlay as they're ready.
+Basically: batch mode = accurate but slow (ASR + cleanup + translation), real-time mode = fast but raw (ASR only).
+
+---
+
 ## Repository Structure
 
 Multi-Lingual-Press-Commentary-Subtitler/
