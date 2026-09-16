@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/e7aefa5b-94b9-4243-96d2-584440c35e78
+
 # Group 2: Multi-Lingual Press Commentary / Movie Subtitler
 
 ## Project Overview
@@ -91,13 +95,6 @@ Burn-in (ffmpeg subtitles filter, resolution-scaled font)
     ▼
 (Optional) Real-time Web App — FastAPI backend + vanilla HTML/JS frontend,
 tunneled via ngrok for a public Colab-hosted URL
-
----
-
-## Demo video 
-Watch here 
-
-https://github.com/Farouqx10/multilingual-press-commentary-subtitler/blob/main/project%20demo.mp4
 
 ---
 
