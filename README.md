@@ -94,6 +94,13 @@ tunneled via ngrok for a public Colab-hosted URL
 
 ---
 
+## Demo video 
+Watch here 
+
+https://github.com/Farouqx10/multilingual-press-commentary-subtitler/blob/main/project%20demo.mp4
+
+---
+
 ## Real-time feature
 Audio is processed in short rolling chunks instead of one full pass.
 Each chunk goes straight from ASR to subtitle — no N-ATLaS cleanup or translation (too slow for live use).
